@@ -1,11 +1,11 @@
 package Encapsulation.CommissionEmployee;
 
 public class CommissionEmployee {
-    String firstName;
-    String lastName;
-    String socialSecurityNumber;
-    double grossSales; // must be greater than 0.0 on initialization
-    double commissionRate; // must be between 0.0 and 1.0
+    private String firstName;
+    private String lastName;
+    private String socialSecurityNumber;
+    private double grossSales; // must be greater than 0.0 on initialization
+    private double commissionRate; // must be between 0.0 and 1.0
 
     public CommissionEmployee (String firstName, String lastName, String socialSecurityNumber, double grossSales, double commissionRate){
         this.firstName = firstName;
@@ -82,7 +82,7 @@ public class CommissionEmployee {
     // to display the employee's detail we have to first override its implementation since the toString method on default returns  the Class Name, "@" and Hash Code( representation of the class)
     @Override
     public String toString(){
-        return "The name of Employee is " + firstName + " " + lastName + ", social security number "+ socialSecurityNumber + ", with a grossSales of " + grossSales + " and a commissionRate of " + commissionRate + ".";
+        return "The Details of Employee; \n Name: " + firstName + " " + lastName + "\n Social security number: "+ socialSecurityNumber + "\n GrossSales: " + grossSales + "\n CommissionRate: " + commissionRate + ".";
     }
     public static void main(String[] args) {
         CommissionEmployee Solomon = new CommissionEmployee("Solomon", "Zigla", "22012447", 50.0, 0.5);
