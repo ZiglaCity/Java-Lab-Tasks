@@ -82,7 +82,7 @@ public class CommissionEmployee {
     // to display the employee's detail we have to first override its implementation since the toString method on default returns  the Class Name, "@" and Hash Code( representation of the class)
     @Override
     public String toString(){
-        return "The Details of Employee; \n Name: " + firstName + " " + lastName + "\n Social security number: "+ socialSecurityNumber + "\n GrossSales: " + grossSales + "\n CommissionRate: " + commissionRate + ".";
+        return "The Details of Employee; \n Name: " + firstName + " " + lastName + "\n Social security number: "+ socialSecurityNumber + "\n GrossSales: " + grossSales + "\n CommissionRate: " + commissionRate;
     }
     public static void main(String[] args) {
         CommissionEmployee Solomon = new CommissionEmployee("Solomon", "Zigla", "22012447", 50.0, 0.5);
