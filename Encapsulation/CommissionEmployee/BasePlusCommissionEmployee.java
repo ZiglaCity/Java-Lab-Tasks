@@ -34,6 +34,7 @@ public class BasePlusCommissionEmployee extends CommissionEmployee {
         System.out.println(newEmployee.toString());
 
         // Updating the baseSalary and inherited fields (grossSales and commissionRate) 
+        newEmployee.setBaseSalary(25);
         newEmployee.setGrossSales(40.5);
         newEmployee.setCommissionRate(0.51);
 
