@@ -11,12 +11,12 @@ class CommissionEmployee {
         $this->firstName = $firstName;
         $this->lastName = $lastName;
         $this->socialSecurityNumber = $socialSecurityNumber;
-        if ($grossSales < 0 ) {
+        if ($grossSales < 0) {
             throw new InvalidArgumentException("Gross sales cannot be negative.");
         }
-        if ($commissionRate < 0 || $commisionRate > 1.0) {
-            throw new InvalidArgumentException("Commission rate cannot be negativen and it must be between 0 and 1.0");
-        
+        if ($commissionRate < 0 || $commissionRate > 1.0) {
+            throw new InvalidArgumentException("Commission rate must be between 0 and 1.");
+        }
         $this->grossSales = $grossSales;
         $this->commissionRate = $commissionRate;
     }
@@ -56,15 +56,16 @@ class CommissionEmployee {
     }
 
     public function setGrossSales($grossSales) {
-        if ($grossSales < 0 ) {
+        if ($grossSales < 0) {
             throw new InvalidArgumentException("Gross sales cannot be negative.");
         }
         $this->grossSales = $grossSales;
     }
 
     public function setCommissionRate($commissionRate) {
-        if ($commissionRate < 0 || $commisionRate > 1.0) {
-            throw new InvalidArgumentException("Commission rate should be between 0 and 1.");
+        if ($commissionRate < 0 || $commissionRate > 1.0) {
+            throw new InvalidArgumentException("Commission rate must be between 0 and 1.");
+        }
         $this->commissionRate = $commissionRate;
     }
     
@@ -83,7 +84,7 @@ function main() {
     echo "Updated grossSales to " . $employee1->getGrossSales() . "\n";
     echo "Updated CommissionRate to " . $employee1->getCommissionRate() . "\n";
 
-    echo "New Earning after updating grossSales and CommissionRate: $" . $employee1->earnings() . "\n";
+    echo "New Earnings after updating grossSales and CommissionRate: $" . $employee1->earnings() . "\n";
 }
 
 main();
