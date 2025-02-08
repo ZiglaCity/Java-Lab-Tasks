@@ -72,6 +72,14 @@ class CommissionEmployee {
     public function earnings() {
         return $this->grossSales * $this->commissionRate;
     }
+
+    public function display() {
+        echo "Name: " . $this->firstName . " " . $this->lastName . "\n";
+        echo "Social Security Number: " . $this->socialSecurityNumber . "\n";
+        echo "Gross Sales: $" . $this->grossSales . "\n";
+        echo "Commission Rate: " . ($this->commissionRate * 100) . "%\n";
+        echo "Earnings: $" . $this->earnings() . "\n";
+    
 }
 
 function main() {
