@@ -57,7 +57,7 @@ class TransportationManager {
 // B. Refuel Sedan 
 // C. Use operateVehicle() to process all
 
-$solomonCar= new Car("C001", "solomonCar", 50, 15);
+$solomonCar= new Car("C001", "Sedan", 50, 15);
 $solomonCar->refuel(20);
 $manager = new TransportationManager();
 $manager->operateVehicle($solomonCar);
