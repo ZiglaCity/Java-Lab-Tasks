@@ -6,8 +6,8 @@ class CommissionEmployee:
         if gross_sales >= 0.0:
             self.__gross_sales = gross_sales
         else:
-            raise ValueError("Gross sales must be >= 0.0")        
-        
+            raise ValueError("Gross sales must be >= 0.0")
+
         if 0.0 <= commission_rate <= 1.0:
             self.__commission_rate = commission_rate
         else:
@@ -52,16 +52,17 @@ class CommissionEmployee:
     def earnings(self):
         return self.__gross_sales * self.__commission_rate
 
-    def __str__(self):
+    def display_employee_details(self):
         return (f"CommissionEmployee: {self.__first_name} {self.__last_name}\n"
                 f"Social Security Number: {self.__social_security_number}\n"
                 f"Gross Sales: {self.__gross_sales}\n"
                 f"Commission Rate: {self.__commission_rate}")
 
 # Implementation Tasks
-employee = CommissionEmployee("Solomon", "Zigla", "22012447", 700.0, 0.1)
-employee.set_gross_sales(900.0)
-employee.set_commission_rate(0.15)
+if __name__ == "__main__":
+    employee = CommissionEmployee("Solomon", "Zigla", "22012447", 700.0, 0.1)
+    employee.set_gross_sales(900.0)
+    employee.set_commission_rate(0.15)
 
-print(employee)
-print(f"Earnings: {employee.earnings()}")
+    print(employee.display_employee_details())
+    print(f"Earnings: {employee.earnings()}")
